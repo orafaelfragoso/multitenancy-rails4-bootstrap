@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: securitytrends_development
+  username: Rafael
+  password: 
+
+test:
+  <<: *default
+  database: securitytrends_test
+
+production:
+  <<: *default
+  database: securitytrends_production
+  username: deployer
+  password: <%= ENV['SECURITYTRENDS_DATABASE_PASSWORD'] %>
