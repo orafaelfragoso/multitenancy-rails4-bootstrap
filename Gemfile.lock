@@ -67,10 +67,6 @@ GEM
       railties (>= 3.2.6, < 5)
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
-    devise-basecamper (0.5.2)
-      activesupport (>= 3.1.0)
-      devise (>= 3.1.0)
-      orm_adapter (>= 0.1)
     diff-lcs (1.2.5)
     dotenv (0.11.1)
       dotenv-deployment (~> 0.0.2)
@@ -176,6 +172,8 @@ GEM
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0.4)
+    shoulda-matchers (2.6.2)
+      activesupport (>= 3.0.0)
     sidekiq (3.1.2)
       celluloid (>= 0.15.2)
       connection_pool (>= 2.0.0)
@@ -227,7 +225,6 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   database_cleaner
   devise
-  devise-basecamper
   factory_girl_rails (~> 4.0)
   faker
   figaro
@@ -243,6 +240,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   selenium-webdriver
+  shoulda-matchers
   sidekiq
   simple_form
   spring

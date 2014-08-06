@@ -1,5 +1,4 @@
 class Account < ActiveRecord::Base
-  has_many :users
 
   validates :subdomain, presence: true,
                         uniqueness: true,

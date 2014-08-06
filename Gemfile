@@ -13,7 +13,6 @@ gem 'simple_form'
 
 # Authentication and Authorization
 gem 'devise'
-gem 'devise-basecamper'
 
 # Background Job and Scheduled Tasks
 gem 'whenever', :require => false
@@ -42,6 +41,7 @@ group :test do
   gem 'database_cleaner'
   gem 'launchy'
   gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
 end
 
 group :production do
