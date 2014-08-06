@@ -15,6 +15,8 @@ Bundler.require(*Rails.groups)
 
 module Securitytrends
   class Application < Rails::Application
+    config.autoload_paths += %W(#{Rails.root}/lib)
+
     config.generators do |g|
       g.test_framework :rspec, fixture: true
       g.fixture_replacement :factory_girl, dir: "spec/factories"

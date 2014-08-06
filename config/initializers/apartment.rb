@@ -44,5 +44,5 @@ end
 # }
 
 # Rails.application.config.middleware.use 'Apartment::Elevators::Domain'
-require 'custom_elevator'
+#require 'custom_elevator'
 Rails.application.config.middleware.use 'CustomElevator'
