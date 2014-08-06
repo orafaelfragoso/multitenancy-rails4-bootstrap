@@ -8,4 +8,13 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_tenant
 
+  protected
+
+  def block_tenant
+    if current_tenant != 'public'
+      Apartment::Tenant.switch('public')
+      redirect_to root_url(subdomain: '') and return 
+    end
+  end        
+
 end
