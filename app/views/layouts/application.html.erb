@@ -2,13 +2,40 @@
 <html>
 <head>
   <title>Securitytrends</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div class="container">
+  <header>
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <%= link_to 'Security Trends', root_path(subdomain: nil) %>
+      </div>
+      <ul class="nav navbar-nav pull-right">
+        <% if user_signed_in? %>
+          <li>
+            <%= link_to 'Sign out', destroy_user_session_path(subdomain: nil), method: :delete %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to 'Sign in', new_user_session_path(subdomain: nil) %>
+          </li>
+        <% end %>
+      </ul>
+    </nav>
+  </header>
+
+  <% flash.each do |key, value| %>
+    <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+  <% end %> 
+
+  <div class="row">
+    <%= yield %>
+  </div>
+</div>
 
 </body>
 </html>
