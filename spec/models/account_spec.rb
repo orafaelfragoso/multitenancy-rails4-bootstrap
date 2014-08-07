@@ -33,4 +33,6 @@ RSpec.describe Account, :type => :model do
     expect(account).to have(1).error_on(:company_name)
   end
 
+  it { should belong_to(:owner) }
+
 end

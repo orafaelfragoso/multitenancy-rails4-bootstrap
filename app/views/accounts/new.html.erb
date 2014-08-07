@@ -1,6 +1,17 @@
 <h1>Create an account</h1>
 
 <%= simple_form_for(@account) do |f| %>
+  <%= f.simple_fields_for :owner do |p| %>
+    <%= p.label :email %>
+    <%= p.input_field :email %>
+
+    <%= p.label :password %>
+    <%= p.input_field :password %>
+
+    <%= p.label :password_confirmation %>
+    <%= p.input_field :password_confirmation %>
+  <% end %>
+
   <%= f.label :company_name %>
   <%= f.input_field :company_name %>
 
