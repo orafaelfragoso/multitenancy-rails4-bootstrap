@@ -1,0 +1,11 @@
+<h1>Create an account</h1>
+
+<%= simple_form_for(@account) do |f| %>
+  <%= f.label :company_name %>
+  <%= f.input_field :company_name %>
+
+  <%= f.label :subdomain %>
+  <%= f.input_field :subdomain %>
+
+  <%= f.button :submit, value: 'Create Account' %>
+<% end %>
