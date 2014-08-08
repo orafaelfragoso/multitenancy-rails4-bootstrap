@@ -228,7 +228,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  apartment
+  apartment (~> 0.25.1)
   autoprefixer-rails
   better_errors
   binding_of_caller

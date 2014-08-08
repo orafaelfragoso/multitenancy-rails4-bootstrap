@@ -16,7 +16,7 @@ describe 'user authentication' do
   end
 
   it 'does not allow user sign in unless on subdomain' do
-    expect { visit new_user_session_path }.to raise_error ActionController::RoutingError
+    expect { visit new_user_session_url(subdomain: nil) }.to raise_error ActionController::RoutingError
   end
 
   it 'does not allow user from one subdomain to sign in on another subdomain' do

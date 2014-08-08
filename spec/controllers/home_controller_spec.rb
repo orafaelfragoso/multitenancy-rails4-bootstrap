@@ -4,14 +4,10 @@ RSpec.describe HomeController, :type => :controller do
 
   describe "GET index" do
 
-    it "returns http success" do
-      get :index
-      expect(response).to be_success
-    end
-
     it "renders the :index template" do
-      get :index
-      expect(response).to render_template :index
+      expect(get: root_url(subdomain: nil)).to route_to(
+        controller: "home",
+        action: "index")
     end
 
   end

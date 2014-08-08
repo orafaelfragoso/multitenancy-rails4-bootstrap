@@ -35,7 +35,7 @@ group :development do
 end
 
 # Multitenancy system
-gem 'apartment'
+gem 'apartment', '~> 0.25.1'
 
 # Testing Suit
 group :test do
