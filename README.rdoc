@@ -1,2 +1,2 @@
-# Rails multi-tenant app
+= Rails multi-tenant app
 A README is coming, lot to cover.
